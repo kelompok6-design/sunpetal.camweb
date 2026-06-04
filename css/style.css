@@ -1,4 +1,15 @@
+/* =========================
+   BASE
+========================= */
 
+body{
+margin:0;
+padding:0;
+font-family:'Poppins',sans-serif;
+background:#1b0b2c;
+color:white;
+overflow-x:hidden;
+}
 
 /* =========================
    MUSIC BUTTON
@@ -71,10 +82,7 @@ text-align:center;
 padding:20px;
 
 background:
-linear-gradient(
-rgba(0,0,0,.45),
-rgba(0,0,0,.45)
-),
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
 url("../assets/bg-home.jpg");
 
 background-size:cover;
@@ -156,8 +164,7 @@ margin-bottom:50px;
 
 .team-grid{
 display:grid;
-grid-template-columns:
-repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:30px;
 }
 
@@ -192,10 +199,6 @@ border-radius:20px;
 
 .front{
 background:#5d2c91;
-}
-
-.front h3{
-font-size:2rem;
 }
 
 .back{
@@ -255,19 +258,9 @@ animation:float 3s infinite;
 }
 
 @keyframes float{
-
-0%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-30px);
-}
-
-100%{
-transform:translateY(0);
-}
-
+0%{transform:translateY(0);}
+50%{transform:translateY(-30px);}
+100%{transform:translateY(0);}
 }
 
 /* =========================
@@ -293,8 +286,7 @@ margin-bottom:30px;
 #gameArea{
 position:relative;
 height:400px;
-background:
-rgba(255,255,255,.05);
+background:rgba(255,255,255,.05);
 border-radius:20px;
 overflow:hidden;
 }
@@ -327,8 +319,7 @@ margin-bottom:40px;
 
 .gallery-grid{
 display:grid;
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
@@ -341,6 +332,45 @@ transition:.4s;
 }
 
 .gallery-grid img:hover{
+transform:scale(1.05);
+}
+
+/* =========================
+   PRODUCT PREVIEW
+========================= */
+
+.product-preview{
+padding:120px 10%;
+text-align:center;
+}
+
+.preview-card{
+max-width:500px;
+margin:auto;
+padding:25px;
+border-radius:20px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+}
+
+.preview-card img{
+width:100%;
+border-radius:15px;
+margin-bottom:20px;
+}
+
+.preview-card button{
+margin-top:15px;
+padding:12px 30px;
+border:none;
+border-radius:30px;
+background:#FFD700;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.preview-card button:hover{
 transform:scale(1.05);
 }
 
@@ -362,24 +392,14 @@ background:#0d021c;
 position:fixed;
 bottom:-100px;
 border-radius:50%;
-background:
-rgba(255,255,255,.2);
-animation:rise linear infinite;
+background:rgba(255,255,255,.2);
+animation:rise linear forwards;
 pointer-events:none;
 }
 
 @keyframes rise{
-
-0%{
-transform:translateY(0);
-opacity:1;
-}
-
-100%{
-transform:translateY(-120vh);
-opacity:0;
-}
-
+0%{transform:translateY(0);opacity:1;}
+100%{transform:translateY(-120vh);opacity:0;}
 }
 
 /* =========================
@@ -395,19 +415,12 @@ opacity:.7;
 }
 
 @keyframes lanternFloat{
-
-0%{
-transform:translateY(100vh);
-}
-
-100%{
-transform:translateY(-120vh);
-}
-
+0%{transform:translateY(100vh);}
+100%{transform:translateY(-120vh);}
 }
 
 /* =========================
-   REVEAL SCROLL
+   REVEAL
 ========================= */
 
 .reveal{
@@ -427,9 +440,7 @@ transform:translateY(0);
 
 @media(max-width:768px){
 
-.hero h1{
-font-size:2.8rem;
-}
+.hero h1{font-size:2.8rem;}
 
 nav{
 flex-direction:column;
@@ -457,5 +468,4 @@ font-size:80px;
 .canva iframe{
 height:500px;
 }
-
 }
