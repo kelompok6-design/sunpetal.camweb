@@ -1,342 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sunpetal | Tangled</title>
+    <title>Sunpetal | Tangled</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-
-
-<!-- MUSIC -->
-
-<audio id="bgMusic" loop>
-
-<source src="assets/music.mp3" type="audio/mpeg">
-
-</audio>
-
-<button id="musicBtn">
-🎵
-</button>
-
-<!-- FLOATING ELEMENTS -->
-
-<div id="bubble-container"></div>
-
-<div id="lantern-container"></div>
-
-<!-- NAVBAR -->
-
-<nav>
-
-<div class="logo">
-🌻 SUNPETAL
-</div>
-
-<ul>
-
-<li>
-<a href="#home">Home</a>
-</li>
-
-<li>
-<a href="#about">About</a>
-</li>
-
-<li>
-<a href="#team">Team</a>
-</li>
-
-<li>
-<a href="design.html">Design</a>
-</li>
-
-<li>
-<a href="https://kelompok6-design.github.io/product/">
-Product
-</a>
-</li>
-
-</ul>
-
-</nav>
-
-<!-- HERO -->
-
-<section id="home" class="hero">
-
-<div class="hero-content">
-
-<h1>
-WELCOME TO THE WORLD OF TANGLED
-</h1>
-
-<p>
-A magical photobooth project inspired by Rapunzel,
-floating lanterns, and dreams that light the sky.
-</p>
-
-<button onclick="location.href='https://kelompok6-design.github.io/product/'">
-Explore Products
-</button>
-
-Explore Products
-
-</button>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about" class="about reveal">
-
-<h2>ABOUT SUNPETAL</h2>
-
-<div class="about-box">
-
-<p>
-
-Sunpetal is a creative group project that presents
-a Tangled-themed photobooth inspired by Rapunzel's
-tower, floating lanterns, golden flowers,
-and magical adventures.
-
-Our goal is to create a memorable experience
-where visitors can step into the world of Tangled.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- TEAM -->
-
-<section id="team" class="team reveal">
-
-<h2>MEET OUR TEAM</h2>
-
-<div class="team-grid">
-
-<div class="flip-card">
-
-<div class="flip-inner">
-
-<div class="front">
-
-<h3>Aulia</h3>
-
-</div>
-
-<div class="back">
-
-<p>Wb Programmer</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="flip-card">
-
-<div class="flip-inner">
-
-<div class="front">
-
-<h3>Faeyza</h3>
-
-</div>
-
-<div class="back">
-
-<p>Apps Programmer</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="flip-card">
-
-<div class="flip-inner">
-
-<div class="front">
-
-<h3>Carissa</h3>
-
-</div>
-
-<div class="back">
-
-<p>Web Design</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="flip-card">
-
-<div class="flip-inner">
-
-<div class="front">
-
-<h3>Kamila</h3>
-
-</div>
-
-<div class="back">
-
-<p>Content Writers</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CANVA -->
-
-<section class="canva reveal">
-
-<h2>OUR DESIGN PROJECT</h2>
-
-<div class="canva-box">
-  <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https://www.canva.com/design/DAHGaYmYNaI/-Wo3MU7mlBbHjaX0H11_Dw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
-</div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAHGaYmYNaI&#x2F;-Wo3MU7mlBbHjaX0H11_Dw&#x2F;view?utm_content=DAHGaYmYNaI&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Sunpetal Cam</a> by FAEYZA KHAIRUNNISA IBRAHIM
-</section>
-
-</div>
-
-</section>
-
-<!-- INTERACTIVE SECTION -->
-
-<section class="journey reveal">
-
-<h2>FOLLOW THE LANTERN</h2>
-
-<p>
-
-Click the floating lantern to discover
-our Tangled products.
-
-</p>
-
-<div id="mainLantern">
-
-🏮
-
-</div>
-
-</section>
-
-<!-- MINI GAME -->
-
-<section class="game reveal">
-
-<h2>COLLECT THE LANTERNS</h2>
-
-<p>
-
-Find all 5 lanterns to unlock
-Rapunzel's treasure.
-
-</p>
-
-<div id="score">
-
-0 / 5
-
-</div>
-
-<div id="gameArea">
-
-</div>
-
-</section>
-
-<!-- GALLERY -->
-
-<section class="gallery reveal">
-
-<h2>TANGLED INSPIRATION</h2>
-
-<div class="gallery-grid">
-
-<img src="assets/rapunzel.png">
-
-<img src="assets/bg-home.jpg">
-
-<img src="assets/lantern.png">
-
-<img src="assets/product1.jpg">
-
-</div>
-
-</section>
-<section class="product-preview">
-
-<h2>Our Product</h2>
-
-<div class="preview-card">
-
-<img src="assets/product-preview.jpg">
-
-<h3>Tangled Photobooth</h3>
-
-<p>
-Click below to visit our product page.
-</p>
-
-<button onclick="goProduct()">
-View Product
-</button>
-
-</div>
-
-</section>
-<!-- FOOTER -->
-
-<footer>
-
-<h3>Sunpetal Group</h3>
-
-<p>
-
-Inspired by Disney Tangled ✨
-
-</p>
-
-</footer>
-
-<script src="js/main.js"></script>
-
-<script src="js/bubbles.js"></script>
+    <!-- MUSIC -->
+    <audio id="bgMusic" loop>
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicBtn">🎵</button>
+
+    <!-- FLOATING ELEMENTS -->
+    <div id="bubble-container"></div>
+    <div id="lantern-container"></div>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            🌻 SUNPETAL
+        </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li>
+                <a href="https://kelompok6-design.github.io/product/">
+                    Product
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>WELCOME TO THE WORLD OF TANGLED</h1>
+
+            <p>
+                A magical photobooth project inspired by Rapunzel,
+                floating lanterns, and dreams that light the sky.
+            </p>
+
+            <button onclick="goProduct()">
+                Explore Products
+            </button>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about reveal">
+        <h2>ABOUT SUNPETAL</h2>
+
+        <div class="about-box">
+            <p>
+                Sunpetal is a creative group project that presents
+                a Tangled-themed photobooth inspired by Rapunzel's
+                tower, floating lanterns, golden flowers,
+                and magical adventures.
+
+                Our goal is to create a memorable experience
+                where visitors can step into the world of Tangled.
+            </p>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="team reveal">
+        <h2>MEET OUR TEAM</h2>
+
+        <div class="team-grid">
+
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="front">
+                        <h3>Aulia</h3>
+                    </div>
+                    <div class="back">
+                        <p>Web Programmer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="front">
+                        <h3>Faeyza</h3>
+                    </div>
+                    <div class="back">
+                        <p>Apps Programmer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="front">
+                        <h3>Carissa</h3>
+                    </div>
+                    <div class="back">
+                        <p>Web Designer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="front">
+                        <h3>Kamila</h3>
+                    </div>
+                    <div class="back">
+                        <p>Content Writer</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CANVA -->
+    <section class="canva reveal">
+        <h2>OUR DESIGN PROJECT</h2>
+
+        <div class="canva-box">
+
+            <div style="position: relative; width: 100%; height: 0; padding-top: 56.25%; overflow: hidden; border-radius: 8px;">
+                <iframe
+                    loading="lazy"
+                    style="position: absolute; width:100%; height:100%; top:0; left:0; border:none;"
+                    src="https://www.canva.com/design/DAHGaYmYNaI/-Wo3MU7mlBbHjaX0H11_Dw/view?embed"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <a href="https://www.canva.com/design/DAHGaYmYNaI/-Wo3MU7mlBbHjaX0H11_Dw/view"
+                target="_blank"
+                rel="noopener">
+                Sunpetal Cam
+            </a>
+
+        </div>
+    </section>
+
+    <!-- INTERACTIVE SECTION -->
+    <section class="journey reveal">
+        <h2>FOLLOW THE LANTERN</h2>
+
+        <p>
+            Click the floating lantern to discover our Tangled products.
+        </p>
+
+        <div id="mainLantern">🏮</div>
+    </section>
+
+    <!-- MINI GAME -->
+    <section class="game reveal">
+        <h2>COLLECT THE LANTERNS</h2>
+
+        <p>
+            Find all 5 lanterns to unlock Rapunzel's treasure.
+        </p>
+
+        <div id="score">0 / 5</div>
+
+        <div id="gameArea"></div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery reveal">
+        <h2>TANGLED INSPIRATION</h2>
+
+        <div class="gallery-grid">
+            <img src="assets/rapunzel.png" alt="Rapunzel">
+            <img src="assets/bg-home.jpg" alt="Background">
+            <img src="assets/lantern.png" alt="Lantern">
+            <img src="assets/product1.jpg" alt="Product">
+        </div>
+    </section>
+
+    <!-- PRODUCT PREVIEW -->
+    <section class="product-preview">
+        <h2>Our Product</h2>
+
+        <div class="preview-card">
+            <img src="assets/product-preview.jpg" alt="Product Preview">
+
+            <h3>Tangled Photobooth</h3>
+
+            <p>
+                Click below to visit our product page.
+            </p>
+
+            <button onclick="goProduct()">
+                View Product
+            </button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h3>Sunpetal Group</h3>
+        <p>Inspired by Disney Tangled ✨</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/bubbles.js"></script>
 
 </body>
 </html>
