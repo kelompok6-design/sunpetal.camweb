@@ -146,6 +146,13 @@ nav a:hover{
     font-size:1.2rem;
     line-height:1.8;
     margin-bottom:25px;
+
+.hero{
+    background-image:url("https://images.unsplash.com/photo-1513151233558-d860c5398176");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
 }
 
 /* =========================
