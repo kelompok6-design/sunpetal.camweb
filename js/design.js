@@ -39,21 +39,19 @@ reveals[i]
    HERO PARALLAX
 ========================= */
 
-window.addEventListener(
-"scroll",
-()=>{
+const hero = document.querySelector(".hero");
 
-const hero =
-document.querySelector(".hero");
+if(hero){
 
-let offset =
-window.pageYOffset;
+    window.addEventListener("scroll", () => {
 
-hero.style.backgroundPositionY =
-offset * 0.5 + "px";
+        const offset = window.scrollY;
+
+        hero.style.backgroundPosition = `center ${offset * 0.5}px`;
+
+    });
 
 }
-);
 
 /* =========================
    FLOATING LANTERNS
