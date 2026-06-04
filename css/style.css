@@ -122,32 +122,46 @@ nav a:hover{
     justify-content:center;
     align-items:center;
     text-align:center;
-
-    background-image:url("../images/hero.jpg");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-    position:relative;
+    padding:0 20px;
 }
 
 .hero-content{
-    z-index:2;
-    max-width:800px;
-    padding:20px;
+    max-width:900px;
 }
 
-.hero h1{
-    font-size:4rem;
-    margin-bottom:20px;
+.hero-content h1{
+    font-family:'Cinzel', serif;
+    font-size:clamp(3rem,8vw,7rem);
+    color:#ffd700;
+    text-transform:uppercase;
+    text-shadow:
+        0 0 10px #ffd700,
+        0 0 20px #ffd700,
+        0 0 40px #ffb700;
+    margin-bottom:30px;
 }
 
-.hero p{
-    font-size:1.2rem;
+.hero-content p{
+    font-size:1.4rem;
     line-height:1.8;
-    margin-bottom:25px;
+    color:white;
+    margin-bottom:40px;
+}
 
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#ffd700;
+    color:#2b004f;
+    border-radius:50px;
+    font-weight:bold;
+    text-decoration:none;
+    transition:0.3s;
+}
 
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px #ffd700;
 }
 
 /* =========================
