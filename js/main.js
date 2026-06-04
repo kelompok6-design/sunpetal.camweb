@@ -220,5 +220,16 @@ window.pageYOffset;
 hero.style.backgroundPositionY =
 offset * 0.5 + "px";
 
+
+}
+/* =========================
+   GO TO PRODUCT WEBSITE
+========================= */
+
+function goProduct(){
+
+window.location.href =
+"https://kelompok6-design.github.io/product/";
+
 }
 );
