@@ -1,14 +1,25 @@
 /* =========================
-   BASE
+   BASE THEME
 ========================= */
 
 body{
 margin:0;
 padding:0;
 font-family:'Poppins',sans-serif;
-background:#1b0b2c;
-color:purple;
+background:#12001f; /* ungu gelap */
+color:#f5e9ff;
 overflow-x:hidden;
+}
+
+/* =========================
+   ACCENT COLORS
+========================= */
+
+:root{
+--purple:#6a0dad;
+--deep-purple:#12001f;
+--gold:#FFD36E;
+--soft-gold:#ffea9f;
 }
 
 /* =========================
@@ -23,10 +34,11 @@ width:60px;
 height:60px;
 border:none;
 border-radius:50%;
-background:#FFD700;
+background:var(--gold);
 font-size:24px;
 cursor:pointer;
 z-index:999;
+color:#2b0a3d;
 }
 
 /* =========================
@@ -41,32 +53,28 @@ padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,.2);
-backdrop-filter:blur(10px);
+background:rgba(30,0,50,.55);
+backdrop-filter:blur(12px);
 z-index:1000;
+border-bottom:1px solid rgba(255,211,110,.2);
 }
 
 .logo{
 font-size:1.5rem;
 font-weight:700;
-color:#FFD700;
-}
-
-nav ul{
-display:flex;
-gap:30px;
-list-style:none;
+color:var(--gold);
+text-shadow:0 0 10px rgba(255,211,110,.4);
 }
 
 nav a{
 text-decoration:none;
-color:white;
+color:#f5e9ff;
 font-weight:500;
 transition:.3s;
 }
 
 nav a:hover{
-color:#FFD700;
+color:var(--gold);
 }
 
 /* =========================
@@ -82,7 +90,7 @@ text-align:center;
 padding:20px;
 
 background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+linear-gradient(rgba(20,0,40,.6),rgba(10,0,20,.7)),
 url("../assets/bg-home.jpg");
 
 background-size:cover;
@@ -90,22 +98,17 @@ background-position:center;
 background-attachment:fixed;
 }
 
-.hero-content{
-max-width:900px;
-}
-
 .hero h1{
 font-size:5rem;
 font-family:'Cinzel',serif;
-color:#FFD700;
-margin-bottom:20px;
-text-shadow:0 0 20px rgba(255,215,0,.7);
+color:var(--gold);
+text-shadow:0 0 25px rgba(255,211,110,.6);
 }
 
 .hero p{
+color:#e8d9ff;
 font-size:1.2rem;
 line-height:1.8;
-margin-bottom:30px;
 }
 
 .hero button{
@@ -114,13 +117,32 @@ border:none;
 border-radius:40px;
 font-size:1rem;
 font-weight:bold;
-background:#FFD700;
+background:var(--gold);
+color:#2b0a3d;
 cursor:pointer;
 transition:.3s;
+box-shadow:0 0 20px rgba(255,211,110,.3);
 }
 
 .hero button:hover{
-transform:scale(1.1);
+transform:scale(1.08);
+background:var(--soft-gold);
+}
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.about h2,
+.team h2,
+.canva h2,
+.gallery h2,
+.game h2,
+.journey h2,
+.product-preview h2{
+color:var(--gold);
+text-shadow:0 0 10px rgba(255,211,110,.3);
+font-size:3rem;
 }
 
 /* =========================
@@ -132,19 +154,14 @@ padding:120px 10%;
 text-align:center;
 }
 
-.about h2{
-font-size:3rem;
-margin-bottom:40px;
-color:#FFD700;
-}
-
 .about-box{
 max-width:900px;
 margin:auto;
 padding:40px;
-background:rgba(255,255,255,.08);
+background:rgba(106,13,173,.15);
 backdrop-filter:blur(15px);
 border-radius:20px;
+border:1px solid rgba(255,211,110,.15);
 }
 
 /* =========================
@@ -156,172 +173,60 @@ padding:120px 10%;
 text-align:center;
 }
 
-.team h2{
-font-size:3rem;
-color:#FFD700;
-margin-bottom:50px;
-}
-
 .team-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:30px;
 }
 
-.flip-card{
-height:280px;
-perspective:1000px;
-}
-
-.flip-inner{
-position:relative;
-width:100%;
-height:100%;
-transition:1s;
-transform-style:preserve-3d;
-}
-
-.flip-card:hover .flip-inner{
-transform:rotateY(180deg);
-}
-
-.front,
-.back{
-position:absolute;
-width:100%;
-height:100%;
-backface-visibility:hidden;
-display:flex;
-justify-content:center;
-align-items:center;
-border-radius:20px;
-}
-
 .front{
-background:#5d2c91;
+background:var(--purple);
 }
 
 .back{
-background:#FFD700;
-color:black;
-transform:rotateY(180deg);
-font-size:1.2rem;
-font-weight:bold;
+background:var(--gold);
+color:#2b0a3d;
 }
 
 /* =========================
    CANVA
 ========================= */
 
-.canva{
-padding:120px 8%;
-text-align:center;
-}
-
-.canva h2{
-font-size:3rem;
-color:#FFD700;
-margin-bottom:40px;
-}
-
 .canva-box{
 border-radius:20px;
 overflow:hidden;
-box-shadow:0 0 30px rgba(255,215,0,.4);
-}
-
-.canva iframe{
-width:100%;
-height:700px;
-border:none;
+box-shadow:0 0 30px rgba(255,211,110,.25);
+border:1px solid rgba(255,211,110,.15);
 }
 
 /* =========================
    JOURNEY
 ========================= */
 
-.journey{
-padding:120px 10%;
-text-align:center;
-}
-
-.journey h2{
-font-size:3rem;
-color:#FFD700;
-}
-
 #mainLantern{
 font-size:120px;
 cursor:pointer;
 margin-top:50px;
 animation:float 3s infinite;
-}
-
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(-30px);}
-100%{transform:translateY(0);}
+filter:drop-shadow(0 0 10px rgba(255,211,110,.4));
 }
 
 /* =========================
-   MINI GAME
+   GAME
 ========================= */
-
-.game{
-padding:120px 10%;
-text-align:center;
-}
-
-.game h2{
-font-size:3rem;
-color:#FFD700;
-margin-bottom:20px;
-}
-
-#score{
-font-size:2rem;
-margin-bottom:30px;
-}
 
 #gameArea{
 position:relative;
 height:400px;
-background:rgba(255,255,255,.05);
+background:rgba(106,13,173,.12);
 border-radius:20px;
 overflow:hidden;
-}
-
-.gameLantern{
-position:absolute;
-font-size:50px;
-cursor:pointer;
-transition:.3s;
-}
-
-.gameLantern:hover{
-transform:scale(1.2);
+border:1px solid rgba(255,211,110,.15);
 }
 
 /* =========================
    GALLERY
 ========================= */
-
-.gallery{
-padding:120px 8%;
-text-align:center;
-}
-
-.gallery h2{
-font-size:3rem;
-color:#FFD700;
-margin-bottom:40px;
-}
-
-.gallery-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
 
 .gallery-grid img{
 width:100%;
@@ -329,49 +234,12 @@ height:280px;
 object-fit:cover;
 border-radius:20px;
 transition:.4s;
+border:2px solid rgba(255,211,110,.1);
 }
 
 .gallery-grid img:hover{
 transform:scale(1.05);
-}
-
-/* =========================
-   PRODUCT PREVIEW
-========================= */
-
-.product-preview{
-padding:120px 10%;
-text-align:center;
-}
-
-.preview-card{
-max-width:500px;
-margin:auto;
-padding:25px;
-border-radius:20px;
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(10px);
-}
-
-.preview-card img{
-width:100%;
-border-radius:15px;
-margin-bottom:20px;
-}
-
-.preview-card button{
-margin-top:15px;
-padding:12px 30px;
-border:none;
-border-radius:30px;
-background:#FFD700;
-font-weight:bold;
-cursor:pointer;
-transition:.3s;
-}
-
-.preview-card button:hover{
-transform:scale(1.05);
+border-color:rgba(255,211,110,.4);
 }
 
 /* =========================
@@ -381,42 +249,22 @@ transform:scale(1.05);
 footer{
 padding:50px;
 text-align:center;
-background:#0d021c;
+background:#0b0014;
+border-top:1px solid rgba(255,211,110,.15);
+color:#e8d9ff;
 }
 
 /* =========================
-   BUBBLES
+   BUBBLES + LANTERNS
 ========================= */
 
 .bubble{
-position:fixed;
-bottom:-100px;
-border-radius:50%;
-background:rgba(255,255,255,.2);
-animation:rise linear forwards;
-pointer-events:none;
+background:rgba(255,211,110,.15);
 }
-
-@keyframes rise{
-0%{transform:translateY(0);opacity:1;}
-100%{transform:translateY(-120vh);opacity:0;}
-}
-
-/* =========================
-   LANTERNS
-========================= */
 
 .floating-lantern{
-position:fixed;
-font-size:40px;
-pointer-events:none;
-animation:lanternFloat linear infinite;
-opacity:.7;
-}
-
-@keyframes lanternFloat{
-0%{transform:translateY(100vh);}
-100%{transform:translateY(-120vh);}
+filter:drop-shadow(0 0 8px rgba(255,211,110,.4));
+opacity:.8;
 }
 
 /* =========================
@@ -442,22 +290,13 @@ transform:translateY(0);
 
 .hero h1{font-size:2.8rem;}
 
-nav{
-flex-direction:column;
-gap:15px;
-}
-
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-}
-
 .about h2,
 .team h2,
 .canva h2,
 .gallery h2,
 .game h2,
-.journey h2{
+.journey h2,
+.product-preview h2{
 font-size:2rem;
 }
 
