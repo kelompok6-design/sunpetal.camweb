@@ -1,83 +1,66 @@
-
-
 /* =========================
    MUSIC
 ========================= */
 
-const music =
-document.getElementById("bgMusic");
-
-const musicBtn =
-document.getElementById("musicBtn");
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
 
 let playing = false;
 
-musicBtn.addEventListener("click", () => {
+if (musicBtn && music) {
+    musicBtn.addEventListener("click", () => {
 
-if (!playing) {
+        if (!playing) {
+            music.play();
+            musicBtn.innerHTML = "🔊";
+            playing = true;
+        } else {
+            music.pause();
+            musicBtn.innerHTML = "🎵";
+            playing = false;
+        }
 
-music.play();
-
-musicBtn.innerHTML = "🔊";
-
-playing = true;
-
-} else {
-
-music.pause();
-
-musicBtn.innerHTML = "🎵";
-
-playing = false;
-
+    });
 }
-
-});
 
 /* =========================
    SCROLL REVEAL
 ========================= */
 
-const reveals =
-document.querySelectorAll(".reveal");
+const reveals = document.querySelectorAll(".reveal");
+
+function revealSections() {
+
+    reveals.forEach(section => {
+
+        const windowHeight = window.innerHeight;
+        const revealTop = section.getBoundingClientRect().top;
+
+        if (revealTop < windowHeight - 100) {
+            section.classList.add("active");
+        }
+
+    });
+
+}
 
 window.addEventListener("scroll", revealSections);
-
-function revealSections(){
-
-for(let i=0;i<reveals.length;i++){
-
-const windowHeight =
-window.innerHeight;
-
-const revealTop =
-reveals[i].getBoundingClientRect().top;
-
-if(revealTop < windowHeight - 100){
-
-reveals[i].classList.add("active");
-
-}
-
-}
-
-}
+revealSections();
 
 /* =========================
    FLOATING LANTERN CLICK
 ========================= */
 
-const mainLantern =
-document.getElementById("mainLantern");
+const mainLantern = document.getElementById("mainLantern");
 
-if(mainLantern){
+if (mainLantern) {
 
-mainLantern.addEventListener("click",()=>{
+    mainLantern.addEventListener("click", () => {
 
-window.location.href=
-"https://kelompok6-design.github.io/product/";
+        window.location.href =
+            "https://kelompok6-design.github.io/product/";
 
-});
+    });
 
 }
 
@@ -85,60 +68,54 @@ window.location.href=
    MINI GAME
 ========================= */
 
-const gameArea =
-document.getElementById("gameArea");
+const gameArea = document.getElementById("gameArea");
+const scoreText = document.getElementById("score");
 
-const scoreText =
-document.getElementById("score");
+if (gameArea && scoreText) {
 
-if(gameArea){
+    let score = 0;
 
-let score = 0;
+    for (let i = 0; i < 5; i++) {
 
-for(let i=0;i<5;i++){
+        const lantern = document.createElement("div");
 
-const lantern =
-document.createElement("div");
+        lantern.classList.add("gameLantern");
+        lantern.innerHTML = "🏮";
 
-lantern.classList.add("gameLantern");
+        lantern.style.left =
+            Math.random() * 80 + "%";
 
-lantern.innerHTML = "🏮";
+        lantern.style.top =
+            Math.random() * 300 + "px";
 
-lantern.style.left =
-Math.random()*80 + "%";
+        lantern.onclick = () => {
 
-lantern.style.top =
-Math.random()*300 + "px";
+            lantern.remove();
 
-lantern.onclick = () => {
+            score++;
 
-lantern.remove();
+            scoreText.innerHTML =
+                `${score} / 5`;
 
-score++;
+            if (score === 5) {
 
-scoreText.innerHTML =
-`${score} / 5`;
+                setTimeout(() => {
 
-if(score === 5){
+                    alert(
+                        "✨ Congratulations! You found all lanterns!"
+                    );
 
-setTimeout(()=>{
+                    goProduct();
 
-alert(
-"✨ Congratulations! You found all lanterns!"
-);
+                }, 500);
 
-window.location.href=
-"https://kelompok6-design.github.io/product/";
+            }
 
-},500);
+        };
 
-}
+        gameArea.appendChild(lantern);
 
-};
-
-gameArea.appendChild(lantern);
-
-}
+    }
 
 }
 
@@ -147,71 +124,63 @@ gameArea.appendChild(lantern);
 ========================= */
 
 const lanternContainer =
-document.getElementById(
-"lantern-container"
-);
+    document.getElementById("lantern-container");
 
-function createLantern(){
+function createLantern() {
 
-const lantern =
-document.createElement("div");
+    if (!lanternContainer) return;
 
-lantern.classList.add(
-"floating-lantern"
-);
+    const lantern = document.createElement("div");
 
-lantern.innerHTML = "🏮";
+    lantern.classList.add("floating-lantern");
+    lantern.innerHTML = "🏮";
 
-lantern.style.left =
-Math.random()*100 + "vw";
+    lantern.style.left =
+        Math.random() * 100 + "vw";
 
-lantern.style.animationDuration =
-(Math.random()*10 + 15) + "s";
+    lantern.style.animationDuration =
+        (Math.random() * 10 + 15) + "s";
 
-lantern.style.fontSize =
-(Math.random()*25 + 25) + "px";
+    lantern.style.fontSize =
+        (Math.random() * 25 + 25) + "px";
 
-lanternContainer.appendChild(
-lantern
-);
+    lanternContainer.appendChild(lantern);
 
-setTimeout(()=>{
-
-lantern.remove();
-
-},25000);
+    setTimeout(() => {
+        lantern.remove();
+    }, 25000);
 
 }
 
-setInterval(createLantern,1500);
+setInterval(createLantern, 1500);
 
 /* =========================
    PARALLAX HERO
 ========================= */
 
-window.addEventListener(
-"scroll",
-() => {
+window.addEventListener("scroll", () => {
 
-const hero =
-document.querySelector(".hero");
+    const hero =
+        document.querySelector(".hero");
 
-let offset =
-window.pageYOffset;
+    if (!hero) return;
 
-hero.style.backgroundPositionY =
-offset * 0.5 + "px";
+    const offset =
+        window.pageYOffset;
 
+    hero.style.backgroundPositionY =
+        offset * 0.5 + "px";
 
-}
+});
+
 /* =========================
    GO TO PRODUCT WEBSITE
 ========================= */
 
-function goProduct(){
+function goProduct() {
 
-window.location.href =
-"https://kelompok6-design.github.io/product/";
+    window.location.href =
+        "https://kelompok6-design.github.io/product/";
 
 }
-);
+
