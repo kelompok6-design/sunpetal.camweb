@@ -92,7 +92,8 @@ if(mainLantern){
 
 mainLantern.addEventListener("click",()=>{
 
-window.location.href="product.html";
+window.location.href=
+"https://kelompok6-design.github.io/product/";
 
 });
 
@@ -144,8 +145,8 @@ alert(
 "✨ Congratulations! You found all lanterns!"
 );
 
-window.location.href =
-"product.html";
+window.location.href=
+"https://kelompok6-design.github.io/product/";
 
 },500);
 
