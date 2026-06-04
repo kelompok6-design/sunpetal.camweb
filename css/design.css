@@ -1,0 +1,399 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#130329;
+color:white;
+overflow-x:hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.25);
+backdrop-filter:blur(12px);
+z-index:999;
+}
+
+.logo{
+font-size:1.5rem;
+font-weight:700;
+color:#FFD700;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#FFD700;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+background:
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.55)
+),
+url("../assets/bg-design.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+.hero-content{
+max-width:800px;
+padding:20px;
+}
+
+.hero h1{
+font-size:5rem;
+font-family:'Cinzel',serif;
+color:#FFD700;
+text-shadow:
+0 0 15px rgba(255,215,0,.5),
+0 0 30px rgba(255,215,0,.4);
+}
+
+.hero p{
+font-size:1.2rem;
+margin-top:20px;
+line-height:1.8;
+}
+
+/* =========================
+   CANVA SECTION
+========================= */
+
+.canva-section{
+padding:120px 8%;
+text-align:center;
+}
+
+.canva-section h2{
+font-size:3rem;
+color:#FFD700;
+margin-bottom:50px;
+}
+
+.canva-box{
+border-radius:25px;
+overflow:hidden;
+
+background:
+rgba(255,255,255,.05);
+
+backdrop-filter:blur(15px);
+
+box-shadow:
+0 0 30px rgba(255,215,0,.25);
+}
+
+.canva-box iframe{
+width:100%;
+height:750px;
+border:none;
+}
+
+/* =========================
+   CONCEPT
+========================= */
+
+.concept{
+padding:120px 10%;
+text-align:center;
+}
+
+.concept h2{
+font-size:3rem;
+color:#FFD700;
+margin-bottom:40px;
+}
+
+.concept-card{
+max-width:1000px;
+margin:auto;
+
+padding:50px;
+
+background:
+rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+border-radius:25px;
+
+line-height:2;
+font-size:1.1rem;
+
+box-shadow:
+0 0 25px rgba(255,255,255,.08);
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+padding:120px 8%;
+text-align:center;
+}
+
+.gallery h2{
+font-size:3rem;
+color:#FFD700;
+margin-bottom:50px;
+}
+
+.gallery-grid{
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+}
+
+.gallery-grid img{
+width:100%;
+height:320px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+transition:.5s;
+
+box-shadow:
+0 0 15px rgba(255,255,255,.1);
+}
+
+.gallery-grid img:hover{
+transform:
+scale(1.05)
+rotate(1deg);
+
+box-shadow:
+0 0 30px rgba(255,215,0,.4);
+}
+
+/* =========================
+   CREDIT
+========================= */
+
+.credit{
+padding:120px 8%;
+text-align:center;
+}
+
+.credit h2{
+font-size:3rem;
+color:#FFD700;
+margin-bottom:50px;
+}
+
+.credit-box{
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+}
+
+.member{
+padding:40px;
+
+background:
+rgba(255,255,255,.08);
+
+border-radius:20px;
+
+backdrop-filter:blur(12px);
+
+transition:.4s;
+}
+
+.member:hover{
+transform:
+translateY(-10px);
+
+box-shadow:
+0 0 25px rgba(255,215,0,.3);
+}
+
+.member h3{
+font-size:1.6rem;
+margin-bottom:10px;
+}
+
+.member p{
+color:#FFD700;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+padding:50px;
+text-align:center;
+background:#0a0118;
+margin-top:50px;
+}
+
+/* =========================
+   BUBBLES
+========================= */
+
+.bubble{
+position:fixed;
+bottom:-100px;
+border-radius:50%;
+
+background:
+rgba(255,255,255,.15);
+
+animation:rise linear infinite;
+
+pointer-events:none;
+}
+
+@keyframes rise{
+
+0%{
+transform:translateY(0);
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+
+}
+
+/* =========================
+   FLOATING LANTERNS
+========================= */
+
+.floating-lantern{
+position:fixed;
+
+font-size:40px;
+
+pointer-events:none;
+
+opacity:.7;
+
+animation:
+lanternFloat linear infinite;
+}
+
+@keyframes lanternFloat{
+
+0%{
+transform:translateY(100vh);
+}
+
+100%{
+transform:translateY(-120vh);
+}
+
+}
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.reveal{
+opacity:0;
+transform:translateY(70px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.8rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.canva-box iframe{
+height:450px;
+}
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.canva-section h2,
+.concept h2,
+.gallery h2,
+.credit h2{
+font-size:2rem;
+}
+
+.concept-card{
+padding:30px;
+font-size:1rem;
+}
+
+}
