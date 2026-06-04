@@ -45,33 +45,42 @@ font-family:'Cinzel',serif;
 .loader-content p{
 margin-top:10px;
 }
-/* ===== NAVBAR ===== */
+
+/* =========================
+   NAVBAR
+========================= */
 
 nav{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    padding:15px 5%;
+    padding:20px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(18,0,31,.85);
-    backdrop-filter:blur(10px);
+    background:rgba(30,0,50,.55);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,211,110,.2);
     z-index:1000;
 }
 
-.nav-menu{
-    display:flex;
-    gap:20px;
-    list-style:none;
-    margin:0;
-    padding:0;
+.logo{
+    font-size:1.5rem;
+    font-weight:700;
+    color:var(--gold);
+    text-shadow:0 0 10px rgba(255,211,110,.4);
 }
 
-.nav-menu a{
-    color:white;
+nav a{
     text-decoration:none;
+    color:#f5e9ff;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--gold);
 }
 
 /* =========================
