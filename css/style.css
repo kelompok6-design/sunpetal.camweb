@@ -47,61 +47,26 @@ margin-top:10px;
 }
 
 /* =========================
-   MUSIC BUTTON
+   SPOTIFY
 ========================= */
 
-#musicBtn{
-position:fixed;
-right:20px;
-bottom:20px;
-width:60px;
-height:60px;
-border:none;
-border-radius:50%;
-background:#FFD700;
-font-size:24px;
-cursor:pointer;
-z-index:999;
+.music-section{
+    padding:100px 10%;
+    text-align:center;
 }
 
-/* =========================
-   NAVBAR
-========================= */
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(0,0,0,.2);
-backdrop-filter:blur(10px);
-z-index:1000;
+.music-section h2{
+    color:#FFD36E;
+    margin-bottom:30px;
+    font-size:2rem;
 }
 
-.logo{
-font-size:1.5rem;
-font-weight:700;
-color:#FFD700;
-}
-
-nav ul{
-display:flex;
-gap:30px;
-list-style:none;
-}
-
-nav a{
-text-decoration:none;
-color:white;
-font-weight:500;
-transition:.3s;
-}
-
-nav a:hover{
-color:#FFD700;
+.spotify-box{
+    max-width:800px;
+    margin:auto;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 0 20px rgba(255,211,110,.2);
 }
 
 /* =========================
