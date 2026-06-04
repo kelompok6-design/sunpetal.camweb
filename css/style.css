@@ -122,39 +122,30 @@ nav a:hover{
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:20px;
 
-    background:
-    linear-gradient(
-        rgba(0,0,0,.45),
-        rgba(0,0,0,.45)
-    ),
-    url("images/hero.jpg");
-
+    background-image:url("../images/hero.jpg");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
 
-    overflow:hidden;
+    position:relative;
 }
 
 .hero-content{
-    max-width:900px;
+    z-index:2;
+    max-width:800px;
     padding:20px;
 }
 
 .hero h1{
-    font-size:5rem;
-    font-family:'Cinzel',serif;
-    color:#FFD700;
-    text-shadow:0 0 20px rgba(255,215,0,.7);
+    font-size:4rem;
     margin-bottom:20px;
 }
 
 .hero p{
     font-size:1.2rem;
     line-height:1.8;
-    margin-bottom:30px;
+    margin-bottom:25px;
 }
 
 /* =========================
