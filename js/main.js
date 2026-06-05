@@ -58,7 +58,7 @@ if (mainLantern) {
     mainLantern.addEventListener("click", () => {
 
         window.location.href =
-            "https://kelompok6-design.github.io/product/";
+            "https://faeyzakhairunnisaibrahim-wq.github.io/product.sunpetal/";
 
     });
 
@@ -180,7 +180,7 @@ window.addEventListener("scroll", () => {
 function goProduct() {
 
     window.location.href =
-        "https://kelompok6-design.github.io/product/";
+        "https://faeyzakhairunnisaibrahim-wq.github.io/product.sunpetal/";
 
 }
 
