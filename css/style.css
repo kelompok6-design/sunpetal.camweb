@@ -118,50 +118,41 @@ nav a:hover{
 
 .hero{
     min-height:100vh;
+    position:relative;
+    overflow:hidden;
+
     display:flex;
     justify-content:center;
     align-items:center;
-    text-align:center;
-    padding:0 20px;
 }
 
-.hero-content{
-    max-width:900px;
+.bg-layer{
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:120%;
+    height:120%;
+
+    background:url('../assets/bg-tangled.jpg') center/cover no-repeat;
+
+    animation:heroFloat 15s ease-in-out infinite;
+
+    z-index:-1;
 }
 
-.hero-content h1{
-    font-family:'Cinzel', serif;
-    font-size:clamp(3rem,8vw,7rem);
-    color:#ffd700;
-    text-transform:uppercase;
-    text-shadow:
-        0 0 10px #ffd700,
-        0 0 20px #ffd700,
-        0 0 40px #ffb700;
-    margin-bottom:30px;
-}
+@keyframes heroFloat{
+    0%{
+        transform:translateX(0) translateY(0) scale(1);
+    }
 
-.hero-content p{
-    font-size:1.4rem;
-    line-height:1.8;
-    color:white;
-    margin-bottom:40px;
-}
+    50%{
+        transform:translateX(-40px) translateY(-20px) scale(1.05);
+    }
 
-.btn{
-    display:inline-block;
-    padding:15px 35px;
-    background:#ffd700;
-    color:#2b004f;
-    border-radius:50px;
-    font-weight:bold;
-    text-decoration:none;
-    transition:0.3s;
-}
-
-.btn:hover{
-    transform:translateY(-5px);
-    box-shadow:0 0 20px #ffd700;
+    100%{
+        transform:translateX(0) translateY(0) scale(1);
+    }
 }
 
 /* =========================
