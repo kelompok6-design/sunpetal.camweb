@@ -134,7 +134,7 @@ nav a:hover{
     width:120%;
     height:120%;
 
-    background:url('../assets/bg-tangled.jpg') center/cover no-repeat;
+    background:url('../assets/background.png') center/cover no-repeat;
 
     animation:heroFloat 15s ease-in-out infinite;
 
